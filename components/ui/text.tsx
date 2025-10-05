@@ -7,45 +7,9 @@ import { cn } from "@/lib/utils";
 const textVariants = cva("", {
   variants: {
     variant: {
-      // Display variants (using display font)
-      "display-xl": [
-        "font-display",
-        "text-6xl",
-        "font-bold",
-        "tracking-tighter",
-        "leading-none",
-        "md:text-8xl",
-        "lg:text-9xl",
-      ],
-      "display-1": [
-        "font-display",
-        "text-6xl",
-        "font-bold",
-        "tracking-tighter",
-        "leading-none",
-        "lg:text-7xl",
-        "xl:text-8xl",
-      ],
-      "display-2": [
-        "font-display",
-        "text-5xl",
-        "font-bold",
-        "tracking-tighter",
-        "leading-none",
-        "lg:text-6xl",
-        "xl:text-7xl",
-      ],
-      "display-3": [
-        "font-display",
-        "text-4xl",
-        "font-bold",
-        "tracking-tight",
-        "leading-tight",
-        "lg:text-5xl",
-        "xl:text-6xl",
-      ],
       // Heading variants (h1-h6)
       h1: [
+        "font-display",
         "text-5xl",
         "font-semibold",
         "tracking-tight",
@@ -53,6 +17,7 @@ const textVariants = cva("", {
         "lg:text-6xl",
       ],
       h2: [
+        "font-display",
         "text-4xl",
         "font-semibold",
         "tracking-tight",
@@ -60,6 +25,7 @@ const textVariants = cva("", {
         "lg:text-5xl",
       ],
       h3: [
+        "font-display",
         "text-3xl",
         "font-semibold",
         "tracking-tight",
@@ -173,10 +139,6 @@ function getDefaultElement(
   variant: VariantProps<typeof textVariants>["variant"]
 ): React.ElementType {
   switch (variant) {
-    case "display-xl":
-    case "display-1":
-    case "display-2":
-    case "display-3":
     case "h1":
       return "h1";
     case "h2":

@@ -62,10 +62,7 @@ const Feature1 = () => {
         <Text variant="overline" className="rounded-full bg-muted px-4 py-1">
           Examples
         </Text>
-        <Text
-          variant="display-3"
-          className="relative z-20 py-2 text-center md:py-7"
-        >
+        <Text variant="h1" className="relative z-20 py-2 text-center md:py-7">
           The Ultimate Block Toolkit
         </Text>
         <Text

@@ -2,6 +2,45 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
 
+const COMPANY_LOGOS = [
+  {
+    name: "Mercury",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mainline/logos/mercury.svg",
+    width: 143,
+    height: 26,
+  },
+  {
+    name: "Retool",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mainline/logos/retool.svg",
+    width: 113,
+    height: 22,
+  },
+  {
+    name: "Descript",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mainline/logos/descript.svg",
+    width: 112,
+    height: 27,
+  },
+  {
+    name: "Perplexity",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mainline/logos/perplexity.svg",
+    width: 141,
+    height: 32,
+  },
+  {
+    name: "Ramp",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mainline/logos/ramp.svg",
+    width: 105,
+    height: 28,
+  },
+  {
+    name: "Raycast",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/mainline/logos/raycast.svg",
+    width: 128,
+    height: 33,
+  },
+];
+
 interface HeroProps {
   badge?: string;
   title?: string;
@@ -14,7 +53,9 @@ interface HeroProps {
     text?: string;
     logos?: Array<{
       name: string;
-      alt: string;
+      src: string;
+      width: number;
+      height: number;
     }>;
   };
 }
@@ -29,16 +70,7 @@ const Hero = ({
   },
   socialProof = {
     text: "The fastest growing teams grow with Frontrow.",
-    logos: [
-      { name: "Company 1", alt: "Company 1" },
-      { name: "Company 2", alt: "Company 2" },
-      { name: "Company 3", alt: "Company 3" },
-      { name: "Company 4", alt: "Company 4" },
-      { name: "Company 5", alt: "Company 5" },
-      { name: "Company 6", alt: "Company 6" },
-      { name: "Company 7", alt: "Company 7" },
-      { name: "Company 8", alt: "Company 8" },
-    ],
+    logos: COMPANY_LOGOS,
   },
 }: HeroProps) => {
   return (
@@ -58,10 +90,7 @@ const Hero = ({
           )}
 
           {/* Title */}
-          <Text
-            variant="display-2"
-            className="mb-6 max-w-4xl md:text-6xl lg:text-7xl"
-          >
+          <Text variant="h2" className="mb-6 max-w-4xl md:text-6xl lg:text-7xl">
             {title}
           </Text>
 
@@ -97,17 +126,19 @@ const Hero = ({
 
               {/* Logo Grid */}
               {socialProof.logos && socialProof.logos.length > 0 && (
-                <div className="grid w-full max-w-5xl grid-cols-2 items-center gap-8 md:grid-cols-4 lg:grid-cols-8">
+                <div className="grid w-full max-w-5xl grid-cols-2 items-center justify-items-center gap-8 md:grid-cols-3 lg:grid-cols-6">
                   {socialProof.logos.map((logo, index) => (
                     <div
                       key={index}
                       className="flex h-12 items-center justify-center"
                     >
-                      <div className="flex h-full w-full items-center justify-center rounded-md border bg-muted/50 px-4">
-                        <Text variant="caption" color="muted">
-                          {logo.name}
-                        </Text>
-                      </div>
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
+                        width={logo.width}
+                        height={logo.height}
+                        className="object-contain opacity-60 transition-opacity hover:opacity-100"
+                      />
                     </div>
                   ))}
                 </div>
