@@ -1,0 +1,17 @@
+---
+alwaysApply: true
+---
+
+We are building a landing page for a company called Frontrow.
+Frontrow is a lead generation company.
+It operates with a services and SaaS model.
+Competitors include Amplemarket, Unifygtm, Lemlist, Fyxer.
+
+Stack is built on Shadcn UI, Tailwind CSS, Next.js, and TypeScript.
+We use Shadcn Blocks, which are pre-built components that can be used to build the landing page.
+
+General rules:
+Do NOT write documentations in MD unless asked for.
+Always write reusable dry code, NEVER patch.
+Either remix existing components from other pages OR build with components in the ui or blocks folder.
+Always use theme colors, never hardcode colors.
