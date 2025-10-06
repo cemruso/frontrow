@@ -21,7 +21,7 @@ const FeatureCard = ({
   description,
   imageSrc,
   imageAlt,
-  imagePosition = "left",
+  imagePosition = "right",
   className,
   ctaText,
   ctaHref,
@@ -30,12 +30,12 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        "flex flex-col overflow-clip rounded-xl border border-border md:grid md:grid-cols-2 md:gap-6 lg:gap-8",
-        imagePosition === "right" ? "md:flex-row-reverse" : "",
+        "flex flex-row overflow-clip rounded-xl border border-border md:gap-6 lg:gap-8",
+        imagePosition === "right" ? "flex-row-reverse" : "",
         className
       )}
     >
-      <div className="relative md:min-h-[24rem] lg:min-h-[28rem] xl:min-h-[32rem]">
+      <div className="w-full max-w-[600px] relative md:min-h-[24rem] lg:min-h-[28rem] xl:min-h-[32rem]">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -43,7 +43,7 @@ const FeatureCard = ({
           className="object-cover object-center"
         />
       </div>
-      <div className="flex flex-col justify-center px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
+      <div className="w-full flex flex-col justify-center px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
         <Text variant="h3" className="mb-3 md:mb-4 lg:mb-6">
           {title}
         </Text>
