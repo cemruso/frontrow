@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Text } from "@/components/ui/text";
 
 const TESTIMONIALS = [
   {
@@ -98,8 +99,12 @@ const Author = ({ image, name, role }: AuthorProps) => {
         <AvatarFallback>{name}</AvatarFallback>
       </Avatar>
       <div className="flex flex-col gap-0.5">
-        <div className="text-sm font-medium text-foreground">{name}</div>
-        <div className="text-sm text-muted-foreground">{role}</div>
+        <Text variant="body-small" className="font-medium">
+          {name}
+        </Text>
+        <Text variant="body-small" color="muted">
+          {role}
+        </Text>
       </div>
     </div>
   );
@@ -111,14 +116,12 @@ const Testimonials = () => {
       <div className="container flex flex-col gap-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
-              What people think
-            </h2>
+            <Text variant="h2">What people think</Text>
             <div className="max-w-[28.75rem]">
-              <p className="text-lg text-muted-foreground md:text-xl">
+              <Text variant="body-large" color="muted">
                 Transform go-to-market with smarter routing, actionable intent,
                 and accelerated scheduling.
-              </p>
+              </Text>
             </div>
           </div>
         </div>
@@ -131,9 +134,9 @@ const Testimonials = () => {
               className="flex h-full flex-col justify-between gap-8 rounded-2xl bg-muted p-6"
             >
               <div className="flex flex-col gap-6">
-                <p className="text-xl leading-relaxed font-medium text-foreground">
+                <Text variant="lead" className="leading-relaxed font-medium">
                   {testimonial.quote}
-                </p>
+                </Text>
               </div>
               <div className="flex items-center justify-between">
                 <Author
@@ -162,17 +165,27 @@ const Testimonials = () => {
               className="group relative flex aspect-square flex-col justify-between gap-8 overflow-hidden rounded-2xl bg-muted p-8 transition-all duration-300 hover:bg-foreground hover:shadow-lg"
             >
               <div className="relative flex flex-col gap-3">
-                <div className="text-5xl font-bold tracking-tight text-foreground transition-colors duration-300 group-hover:text-background">
+                <Text
+                  variant="h2"
+                  className="text-5xl transition-colors duration-300 group-hover:text-background"
+                >
                   {caseStudy.stats[0].number}
-                </div>
-                <p className="text-sm font-medium text-muted-foreground transition-colors duration-300 group-hover:text-background/80">
+                </Text>
+                <Text
+                  variant="body-small"
+                  color="muted"
+                  className="font-medium transition-colors duration-300 group-hover:text-background/80"
+                >
                   {caseStudy.stats[0].text}
-                </p>
+                </Text>
               </div>
               <div className="relative flex flex-col gap-6">
-                <p className="text-xl leading-tight font-semibold text-foreground transition-colors duration-300 group-hover:text-background">
+                <Text
+                  variant="lead"
+                  className="leading-tight font-semibold transition-colors duration-300 group-hover:text-background"
+                >
                   {caseStudy.title}
-                </p>
+                </Text>
               </div>
             </a>
           ))}

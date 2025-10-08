@@ -54,6 +54,15 @@
   --color-base-900: var(--base-900);
   --color-base-950: var(--base-950);
   --color-base-1000: var(--base-1000);
+  --animate-ripple: ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite;
+  @keyframes ripple {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
 }
 
 :root {
@@ -150,4 +159,13 @@
   max-width: 80rem !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

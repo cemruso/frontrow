@@ -13,9 +13,8 @@ interface HeroTickerProps {
 
 const DEFAULT_PHRASES = [
   "Win 10x More Leads",
-  "Generate More Pipeline",
-  "Automate Your Dials",
-  "Turn Prospectors Into Customers",
+  "Hyper Personalize Outbound",
+  "Boost Your Open Rates",
 ];
 
 export function HeroTicker({

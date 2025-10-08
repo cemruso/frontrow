@@ -4,19 +4,20 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { Text } from "@/components/ui/text";
 
 const Feature3 = () => {
   return (
     <section className="bg-background py-32">
       <div className="container flex flex-col items-center">
-        <h1 className="font-inter mx-auto max-w-4xl text-center text-[70px] leading-[65px] font-semibold tracking-tighter lg:text-[85px] lg:leading-[86px]">
+        <Text variant="h1" align="center" className="max-w-4xl">
           Your Team of A-Players
-        </h1>
+        </Text>
         <CardsContainer />
-        <p className="font-inter mx-auto max-w-xl text-center text-lg font-medium text-black">
+        <Text variant="body-large" align="center" className="max-w-xl">
           Artists can finely craft components built with React, Tailwind, and
           Shadcn UI. Developers can copy and paste them.
-        </p>
+        </Text>
         <div className="mt-10 flex items-center gap-2">
           <Button
             asChild
