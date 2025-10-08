@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
+import { Reviews, type Review } from "./reviews";
 
 const COMPANY_LOGOS = [
   {
@@ -49,6 +50,7 @@ interface HeroProps {
     placeholder?: string;
     buttonText?: string;
   };
+  reviews?: Review[];
   socialProof?: {
     text?: string;
     logos?: Array<{
@@ -68,6 +70,7 @@ const Hero = ({
     placeholder: "What's your work email?",
     buttonText: "Get started",
   },
+  reviews,
   socialProof = {
     text: "The fastest growing teams grow with Frontrow.",
     logos: COMPANY_LOGOS,
@@ -105,7 +108,7 @@ const Hero = ({
           </Text>
 
           {/* Email Input & CTA */}
-          <div className="mb-20 flex w-full max-w-md flex-col gap-3 sm:flex-row">
+          <div className="mb-8 flex w-full max-w-md flex-col gap-3 sm:flex-row">
             <Input
               type="email"
               placeholder={input.placeholder}
@@ -114,6 +117,11 @@ const Hero = ({
             <Button size="lg" className="h-12 px-6">
               {input.buttonText}
             </Button>
+          </div>
+
+          {/* Reviews Section */}
+          <div className="mb-20">
+            <Reviews reviews={reviews} />
           </div>
 
           {/* Social Proof Section */}

@@ -1,0 +1,55 @@
+# FrontRow (Managed AI outbound for B2B)
+
+FrontRow provides an end to end, fully managed outbound service for B2B companies. You sign a monthly engagement and we run the campaigns for you. Before we start we collect a small set of inputs about your company and products such as your website, LinkedIn, and a short description. After that we handle the rest and every message is delivered with hyper-personalization.
+
+## What we deliver?
+
+Audience design and lookalike modeling. We define or refine your Ideal Customer Profile ICP and use machine learning to create lookalike company lists that resemble your existing customers or the companies you want to target. We support include and exclude lists and we suppress duplicates across your account.
+
+Research that makes messages relevant. Using only sources you approve such as company websites, LinkedIn company and personal pages, review platforms, funding databases, and web search we gather context and map exactly which fields will be used in each email.
+
+AI written plain text emails with hyper-personalization. An enterprise grade LLM stack turns the research into concise one to one emails. Our two stage approach first selects the most relevant data points then writes the email anchored to those facts.
+
+Deliverability as a first principle. We invest heavily to land in the primary inbox and we back that with optional email verification, sending from Google Outlook or SMTP, per lead timezone scheduling, safe daily limits, follow ups, and optional retargeting touches. We currently perform at 2x the market.
+
+Measurement and continuous improvement. We analyze outcomes, refine ICPs and messaging, create lookalike campaigns based on what works, and when appropriate reuse recently processed leads to speed execution.
+
+## How we work
+
+### Discovery and profiling
+
+You share your website and LinkedIn plus a short product description or a file or a URL. We analyze these with AI to create clear editable summaries of your company and product.
+
+### Audience design
+
+We propose ICP filters such as industries, company sizes, roles, and geographies or follow your direction. You can provide include or exclude lists and a lead cap. We remove duplicates across your campaigns and account.
+
+### Research plan
+
+Together we confirm which sources to use. We gather only from those sources and we predefine which specific details will appear in each email so hyper-personalization is always backed by evidence.
+
+### Messaging and generation
+
+We select a copy approach such as value focused or problem solution. An enterprise grade LLM stack turns approved data into clear plain text emails tailored to each person.
+
+Execution
+We connect the sending inboxes through Google Outlook or SMTP and manage daily windows, each lead’s local time, follow ups, and optional retargeting touches. If needed we can discuss warmed inbox options.
+
+### Measurement and lookalike expansion
+
+We monitor results, adjust targeting and prompts, and build lookalike campaigns that compound performance over time with hyper-personalization at scale.
+
+### Technology you can trust
+
+Our platform combines enterprise grade LLMs with lead data providers, an email verification partner, a controlled scraping pipeline, and secure inbox integrations with Google Outlook and SMTP. Workflows are orchestrated event by event and recent lead data can be reused when appropriate to accelerate delivery while respecting your approval and privacy controls.
+
+### Our principles
+
+Automation by default with clear client approvals
+Hyper-personalization grounded in verified sources
+Deliverability and clarity over tricks and noise
+Fast time to value with continuous learning
+
+### Outcome
+
+You do not build lists or write emails. FrontRow delivers targeted outreach with hyper-personalization, strong deliverability, and learning loops that improve results month after month.
