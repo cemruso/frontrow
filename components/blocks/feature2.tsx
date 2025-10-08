@@ -21,7 +21,7 @@ const Feature2 = () => {
           convert leads at scale.
         </Text>
 
-        <div className="flex flex-col gap-6 lg:px-16 max-w-7xl mx-auto w-full">
+        <div className="flex flex-col gap-6 max-w-7xl mx-auto w-full">
           <FeatureCard
             title="AI-Powered Lead Generation"
             description="Leverage advanced AI algorithms to identify and qualify high-quality leads automatically. Save time and increase conversion rates with intelligent targeting."

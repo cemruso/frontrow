@@ -3,6 +3,9 @@ import { Feature1 } from "@/components/blocks/feature1";
 import { Feature2 } from "@/components/blocks/feature2";
 import { Stats } from "@/components/blocks/stats";
 import { Testimonials } from "@/components/blocks/testimonials";
+import { Faq } from "@/components/blocks/faq";
+import { Testimonials2 } from "@/components/blocks/testimonials2";
+import { Feature3 } from "@/components/blocks/feature3";
 
 export default function Home() {
   return (
@@ -10,8 +13,11 @@ export default function Home() {
       <Hero />
       <Feature2 />
       <Feature1 />
+      <Feature3 />
+      <Testimonials2 />
       <Stats />
       <Testimonials />
+      <Faq />
     </main>
   );
 }

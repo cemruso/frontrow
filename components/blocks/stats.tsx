@@ -57,7 +57,7 @@ const Stats = () => {
 
   return (
     <section className="py-32">
-      <div className="container flex justify-center">
+      <div className="container flex justify-center px-4">
         <div className="flex w-full flex-col justify-between gap-4 lg:flex-row">
           <div className="w-full lg:w-1/3">
             <h1 className="w-full font-calSans text-6xl font-medium">

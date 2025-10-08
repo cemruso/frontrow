@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
 import { Reviews, type Review } from "./reviews";
+import { HeroTicker } from "./hero-ticker";
 
 const COMPANY_LOGOS = [
   {
@@ -64,7 +65,7 @@ interface HeroProps {
 
 const Hero = ({
   badge = "Lead Generation",
-  title = "Growth, engineered",
+  title = "Growth, Re-Imagined",
   description = "Transform growth into a science. Capture intent signals, run AI agents, and engage every prospect with personalized outbound in one system of action.",
   input = {
     placeholder: "What's your work email?",
@@ -93,9 +94,15 @@ const Hero = ({
           )}
 
           {/* Title */}
-          <Text variant="h2" className="mb-6 max-w-4xl md:text-6xl lg:text-7xl">
-            {title}
-          </Text>
+          <div className="flex flex-col items-center container">
+            <Text
+              variant="h2"
+              className="font-mono uppercase font-bold max-w-4xl md:text-6xl lg:text-7xl"
+            >
+              {title}
+            </Text>
+            <HeroTicker className="mb-6" />
+          </div>
 
           {/* Description */}
           <Text

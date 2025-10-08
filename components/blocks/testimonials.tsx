@@ -49,8 +49,6 @@ const CASE_STUDIES = [
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
       role: "Head of Marketing",
     },
-    background:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/ivan-bandura-hqnUYXsN5oY-unsplash.jpg",
   },
   {
     title: "How Mercury Reduced Speed-to-Lead by 80%",
@@ -67,8 +65,6 @@ const CASE_STUDIES = [
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
       role: "Sales Director",
     },
-    background:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/jeremy-bishop-iEjCQtcsVPY-unsplash.jpg",
   },
   {
     title: "From Zero to $7M in Pipeline",
@@ -85,8 +81,6 @@ const CASE_STUDIES = [
         "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
       role: "Head of Marketing",
     },
-    background:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/kevin-charit-1fL2Q1JcbNc-unsplash.jpg",
   },
 ];
 
@@ -167,10 +161,6 @@ const Testimonials = () => {
               href={caseStudy.link}
               className="group relative flex aspect-square flex-col justify-between gap-8 overflow-hidden rounded-2xl bg-muted p-8 transition-all duration-300 hover:bg-foreground hover:shadow-lg"
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-300 group-hover:scale-105 group-hover:opacity-10"
-                style={{ backgroundImage: `url(${caseStudy.background})` }}
-              />
               <div className="relative flex flex-col gap-3">
                 <div className="text-5xl font-bold tracking-tight text-foreground transition-colors duration-300 group-hover:text-background">
                   {caseStudy.stats[0].number}

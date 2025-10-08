@@ -74,7 +74,7 @@ const Feature1 = () => {
           Perfectly balanced between performance and customization.
         </Text>
 
-        <div className="relative mt-10 grid w-full max-w-4xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="relative mt-10 grid w-full container grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, idx) => (
             <div
               key={idx}
