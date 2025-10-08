@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
 import { Reviews, type Review } from "./reviews";
 import { HeroTicker } from "./hero-ticker";
+import { Badge } from "../ui/badge";
 
 const COMPANY_LOGOS = [
   {
@@ -84,24 +85,13 @@ const Hero = ({
           {/* Badge */}
           {badge && (
             <div className="mb-6">
-              <Text
-                variant="badge"
-                className="inline-flex items-center rounded-full border px-4 py-1.5"
-              >
-                {badge}
-              </Text>
+              <Badge variant="outline">{badge}</Badge>
             </div>
           )}
 
           {/* Title */}
           <div className="flex flex-col items-center container">
-            <Text
-              variant="h2"
-              className="font-mono uppercase font-bold max-w-4xl md:text-6xl lg:text-7xl"
-            >
-              {title}
-            </Text>
-            <HeroTicker className="mb-6" />
+            <HeroTicker title={title} className="mb-6" />
           </div>
 
           {/* Description */}
@@ -109,7 +99,7 @@ const Hero = ({
             variant="body-large"
             color="muted"
             align="center"
-            className="mb-10 max-w-2xl md:text-xl"
+            className="mb-10 max-w-3xl md:text-xl"
           >
             {description}
           </Text>
@@ -125,6 +115,16 @@ const Hero = ({
               {input.buttonText}
             </Button>
           </div>
+
+          {/* CTA Row */}
+          {/* <div className="mb-8 flex max-w-md flex-col gap-3 sm:flex-row mx-auto">
+            <Button size="lg" variant="default" className="min-w-32">
+              Try for Free
+            </Button>
+            <Button size="lg" variant="outline" className="min-w-32">
+              Book a Demo
+            </Button>
+          </div> */}
 
           {/* Reviews Section */}
           <div className="mb-20">

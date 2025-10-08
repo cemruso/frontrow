@@ -30,7 +30,7 @@ const Stats13 = () => {
       <style>{css}</style>
       <div className="gradient container">
         <div className="mx-auto text-center ">
-          <Text variant="h1" align="center">
+          <Text variant="h2" align="center">
             Top-Tier Stats Across the Board
           </Text>
           <Text

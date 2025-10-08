@@ -29,7 +29,7 @@ const CTA = () => {
               <Text variant="body-large" color="muted" className="max-w-sm">
                 Ready to transform your lead generation?
               </Text>
-              <Text variant="h1">Start Growing Today</Text>
+              <Text variant="h2">Start Growing Today</Text>
               <Button
                 variant="secondary"
                 className="relative z-99 mb-20 w-fit !rounded-none border px-10"

@@ -10,28 +10,20 @@ const Feature3 = () => {
   return (
     <section className="bg-background py-32">
       <div className="container flex flex-col items-center">
-        <Text variant="h1" align="center" className="max-w-4xl">
-          Your Team of A-Players
+        <Text variant="h2" align="center" className="max-w-4xl">
+          Build Your Sales Dream Team
         </Text>
         <CardsContainer />
         <Text variant="body-large" align="center" className="max-w-xl">
-          Artists can finely craft components built with React, Tailwind, and
-          Shadcn UI. Developers can copy and paste them.
+          Join hundreds of companies using Frontrow to scale their outbound
+          sales and generate qualified leads on autopilot.
         </Text>
         <div className="mt-10 flex items-center gap-2">
-          <Button
-            asChild
-            variant="default"
-            className="block h-fit w-fit rounded-full px-6 py-2 text-sm leading-loose"
-          >
-            <a href="#">Join for $9.99/m</a>
+          <Button asChild variant="default">
+            <a href="#">Start Free Trial</a>
           </Button>
-          <Button
-            asChild
-            variant="secondary"
-            className="block h-fit w-fit rounded-full px-6 py-2 text-sm leading-loose"
-          >
-            <a href="#">View on Github</a>
+          <Button asChild variant="secondary">
+            <a href="#">Book a Demo</a>
           </Button>
         </div>
       </div>

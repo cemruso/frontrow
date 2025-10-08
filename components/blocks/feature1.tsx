@@ -8,62 +8,82 @@ import {
   Plug2,
   Snowflake,
   Zap,
+  Target,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui/text";
+import { Badge } from "@/components/ui/badge";
 
 const Feature1 = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const items = [
     {
-      title: "Plug & Play",
+      title: "Instant Setup",
       description:
-        "Ready to use components that work out of the box with no configuration ",
+        "Get started in minutes with our plug-and-play lead generation platform",
       icon: Plug2,
     },
     {
-      title: "Customizable",
+      title: "Customizable Campaigns",
       description:
-        "Fully customizable components with clean, maintainable code structure",
+        "Tailor your outreach strategies to match your unique business needs",
       icon: CodeXml,
     },
     {
-      title: "Design Control",
+      title: "Brand Control",
       description:
-        "Complete control over styling and animations with modern  patterns",
+        "Maintain complete control over your messaging and brand identity",
       icon: Snowflake,
     },
     {
-      title: "Regular Updates",
+      title: "Real-Time Sync",
       description:
-        "Continuously updated with new features, improvements and fixes",
+        "Keep your CRM and lead data synchronized in real-time across all platforms",
       icon: Clock,
     },
     {
-      title: "Clean Code",
+      title: "Clean Data",
       description:
-        "Well-structured, readable code following industry best practices",
+        "High-quality, verified leads with accurate contact information",
       icon: BrushCleaning,
     },
     {
-      title: "Performance",
+      title: "Fast Delivery",
       description:
-        "Optimized for speed and efficiency without compromising functionality",
+        "Get qualified leads delivered quickly without compromising on quality",
       icon: Zap,
+    },
+    {
+      title: "Precision Targeting",
+      description:
+        "Reach your ideal customers with advanced targeting and segmentation tools",
+      icon: Target,
+    },
+    {
+      title: "Scale with Confidence",
+      description:
+        "Grow your pipeline predictably with proven strategies that scale",
+      icon: TrendingUp,
+    },
+    {
+      title: "Dedicated Support",
+      description:
+        "Work with expert lead generation specialists who understand your goals",
+      icon: Users,
     },
   ];
 
   return (
     <section className="overflow-hidden py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
-        <Text variant="overline" className="rounded-full bg-muted px-4 py-1">
-          Examples
-        </Text>
-        <Text variant="h1" className="relative z-20 py-2 text-center md:py-7">
-          The Ultimate Block Toolkit
+        <Badge variant="outline">Why Frontrow?</Badge>
+        <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
+          Built for Modern Sales Teams
         </Text>
         <Text
           variant="body-large"
@@ -71,7 +91,7 @@ const Feature1 = () => {
           align="center"
           className="mx-auto max-w-xl"
         >
-          Perfectly balanced between performance and customization.
+          Everything you need to generate, qualify, and convert leads at scale.
         </Text>
 
         <div className="relative mt-10 grid w-full container grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
