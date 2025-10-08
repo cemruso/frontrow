@@ -22,27 +22,27 @@ const Feature2 = () => {
 
         <div className="flex flex-col gap-6 max-w-7xl mx-auto w-full">
           <FeatureCard
-            title="AI-Powered Lead Generation"
-            description="Leverage advanced AI algorithms to identify and qualify high-quality leads automatically. Save time and increase conversion rates with intelligent targeting."
-            imageSrc="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
-            imageAlt="AI-Powered Lead Generation"
-            ctaText="Learn More"
+            title="We Source Your Ideal Leads"
+            description="Our intelligent scraping engine analyzes company data across multiple sources to identify and validate your perfect prospects. We generate detailed ICPs and surface decision-makers who match your exact criteria."
+            imageSrc="/img/features/feature-1.png"
+            imageAlt="We Source Your Ideal Leads"
+            ctaText="See How It Works"
             ctaHref="#"
           />
           <FeatureCard
-            title="Seamless CRM Integration"
-            description="Connect with your existing tools effortlessly. Our platform integrates with all major CRM systems to streamline your workflow and keep your data synchronized."
-            imageSrc="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg"
-            imageAlt="Seamless CRM Integration"
-            ctaText="View Integrations"
+            title="We Craft Hyper-Personalized Outreach"
+            description="Every lead receives a uniquely tailored message. Our personalization engine analyzes prospect data, company context, and trigger events to generate compelling emails that resonate and drive responses."
+            imageSrc="/img/features/feature-2.png"
+            imageAlt="We Craft Hyper-Personalized Outreach"
+            ctaText="View Examples"
             ctaHref="#"
           />
           <FeatureCard
-            title="Real-Time Analytics"
-            description="Track your campaign performance with comprehensive analytics and insights. Make data-driven decisions to optimize your lead generation strategy."
-            imageSrc="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg"
-            imageAlt="Real-Time Analytics"
-            ctaText="See Analytics"
+            title="We Book Meetings on Autopilot"
+            description="From send schedules to follow-ups and replies, we orchestrate your entire outreach campaign. Sit back while our automation engine fills your calendar with qualified meetings."
+            imageSrc="/img/features/feature-3.png"
+            imageAlt="We Book Meetings on Autopilot"
+            ctaText="Get Started"
             ctaHref="#"
           />
         </div>

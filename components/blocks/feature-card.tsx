@@ -35,12 +35,12 @@ const FeatureCard = ({
         className
       )}
     >
-      <div className="w-full max-w-[600px] relative md:min-h-[24rem] lg:min-h-[28rem] xl:min-h-[32rem]">
+      <div className="w-full max-w-[600px] relative md:min-h-[24rem] lg:min-h-[28rem] xl:min-h-[24rem] bottom-[-36px] border-l border-t border-border rounded-tl-xl">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
-          className="object-cover object-center"
+          className="object-contain object-right"
         />
       </div>
       <div className="w-full flex flex-col justify-center px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
