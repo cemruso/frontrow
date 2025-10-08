@@ -39,7 +39,7 @@ export function HeroTicker({
     <div className="flex flex-col items-center">
       <Text
         variant="h1"
-        className="word-spacing-tight font-semibold text-base-400"
+        className="word-spacing-tight font-semibold text-base-400 text-center"
       >
         {title}
       </Text>

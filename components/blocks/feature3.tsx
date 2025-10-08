@@ -19,10 +19,10 @@ const Feature3 = () => {
           sales and generate qualified leads on autopilot.
         </Text>
         <div className="mt-10 flex items-center gap-2">
-          <Button asChild variant="default">
+          <Button asChild variant="default" size="lg">
             <a href="#">Start Free Trial</a>
           </Button>
-          <Button asChild variant="secondary">
+          <Button asChild variant="secondary" size="lg">
             <a href="#">Book a Demo</a>
           </Button>
         </div>

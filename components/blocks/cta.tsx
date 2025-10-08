@@ -32,7 +32,8 @@ const CTA = () => {
               <Text variant="h2">Start Growing Today</Text>
               <Button
                 variant="secondary"
-                className="relative z-99 mb-20 w-fit !rounded-none border px-10"
+                size="lg"
+                className="relative z-99 mb-20 "
               >
                 Book a Demo
               </Button>
