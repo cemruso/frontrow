@@ -104,96 +104,79 @@ const Navbar = ({
 
   return (
     <>
-      <section className="bg-background">
-        {/* Desktop Menu */}
-        <div className="hidden border-b lg:block">
-          <div className="container px-4 py-4">
-            <nav className="flex justify-between">
-              {/* Logo */}
-              <a
-                href={logo.url}
-                className="flex items-center gap-1.5 mr-[66px]"
-              >
-                <img
-                  src="/img/icon.png"
-                  className="h-6 w-auto"
-                  alt="Frontrow"
-                />
-                <Text variant="h6" as="span" className="tracking-tighter">
-                  {logo.title}
-                </Text>
-              </a>
-              <div className="flex items-center gap-6">
-                <div className="flex items-center">
-                  <NavigationMenuWithoutViewport>
-                    <NavigationMenuList className="relative">
-                      {menu.map((item) => renderMenuItem(item))}
-                    </NavigationMenuList>
-                  </NavigationMenuWithoutViewport>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <Button asChild variant="outline" size="sm">
-                  <a href={auth.login.url}>{auth.login.title}</a>
-                </Button>
-                <Button asChild size="sm">
-                  <a href={auth.signup.url}>{auth.signup.title}</a>
-                </Button>
-              </div>
-            </nav>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
+      <section className="bg-background border-b">
         <div className="container px-4 py-4">
-          <div className="block lg:hidden">
-            <div className="flex items-center justify-between">
-              <a href={logo.url} className="flex items-center gap-2">
-                <img
-                  src="/img/icon.png"
-                  className="h-6 w-auto"
-                  alt="Frontrow"
-                />
-              </a>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
-                    <Menu className="size-4" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent className="overflow-y-auto">
-                  <SheetHeader>
-                    <SheetTitle>
-                      <a href={logo.url} className="flex items-center gap-2">
-                        <img
-                          src="/img/icon.png"
-                          className="h-6 w-auto"
-                          alt="Frontrow"
-                        />
-                      </a>
-                    </SheetTitle>
-                  </SheetHeader>
-                  <div className="flex flex-col gap-6 p-4">
-                    <Accordion
-                      type="single"
-                      collapsible
-                      className="flex w-full flex-col gap-4"
-                    >
-                      {menu.map((item) => renderMobileMenuItem(item))}
-                    </Accordion>
-
-                    <div className="flex flex-col gap-3">
-                      <Button asChild variant="outline">
-                        <a href={auth.login.url}>{auth.login.title}</a>
-                      </Button>
-                      <Button asChild>
-                        <a href={auth.signup.url}>{auth.signup.title}</a>
-                      </Button>
-                    </div>
-                  </div>
-                </SheetContent>
-              </Sheet>
+          {/* Desktop Menu */}
+          <nav className="hidden lg:flex justify-between">
+            {/* Logo */}
+            <a href={logo.url} className="flex items-center gap-1.5 mr-[66px]">
+              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
+              <Text variant="h6" as="span" className="tracking-tighter">
+                {logo.title}
+              </Text>
+            </a>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center">
+                <NavigationMenuWithoutViewport>
+                  <NavigationMenuList className="relative">
+                    {menu.map((item) => renderMenuItem(item))}
+                  </NavigationMenuList>
+                </NavigationMenuWithoutViewport>
+              </div>
             </div>
+            <div className="flex gap-2">
+              <Button asChild variant="outline" size="sm">
+                <a href={auth.login.url}>{auth.login.title}</a>
+              </Button>
+              <Button asChild size="sm">
+                <a href={auth.signup.url}>{auth.signup.title}</a>
+              </Button>
+            </div>
+          </nav>
+
+          {/* Mobile Menu */}
+          <div className="flex lg:hidden items-center justify-between">
+            <a href={logo.url} className="flex items-center gap-2">
+              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
+            </a>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="size-4" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent className="overflow-y-auto">
+                <SheetHeader>
+                  <SheetTitle>
+                    <a href={logo.url} className="flex items-center gap-2">
+                      <img
+                        src="/img/icon.png"
+                        className="h-6 w-auto"
+                        alt="Frontrow"
+                      />
+                    </a>
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="flex flex-col gap-6 p-4">
+                  <Accordion
+                    type="single"
+                    collapsible
+                    className="flex w-full flex-col gap-4"
+                  >
+                    {menu.map((item) => renderMobileMenuItem(item))}
+                  </Accordion>
+
+                  <div className="flex flex-col gap-3">
+                    <Button asChild variant="outline">
+                      <a href={auth.login.url}>{auth.login.title}</a>
+                    </Button>
+                    <Button asChild>
+                      <a href={auth.signup.url}>{auth.signup.title}</a>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </section>
