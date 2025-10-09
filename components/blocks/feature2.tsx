@@ -6,7 +6,7 @@ const Feature2 = () => {
   return (
     <section className="py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
-        <Badge variant="outline">Features</Badge>
+        <Badge variant="outline">How it Works</Badge>
         <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
           Get Started in Minutes
         </Text>

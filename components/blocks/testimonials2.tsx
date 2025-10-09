@@ -34,26 +34,26 @@ const Testimonials2 = () => {
               <CarouselItem className="grid grid-cols-1 gap-y-10 pt-4 pr-4 pb-14 pl-8 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">
                 <div>
                   <img
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
-                    alt="placeholder"
-                    className="mx-auto max-h-80 rounded-xl lg:mx-0 lg:max-h-none"
+                    src="/img/clients/kolektif-house-hero.jpg"
+                    alt="Kolektif House workspace"
+                    className="mx-auto h-80 w-full rounded-xl object-cover lg:mx-0"
                   />
                   <div className="mt-4 text-center">
-                    <Text variant="h6">John Doe</Text>
+                    <Text variant="h6">Ahmet Onur</Text>
                     <Text variant="body" color="muted">
-                      CEO, Company Name
+                      CEO, Kolektif House
                     </Text>
                   </div>
                 </div>
                 <div className="col-span-2">
                   <div className="mb-6 flex items-center justify-center gap-2 lg:mb-8 lg:justify-start">
                     <img
-                      src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/nike-icon.svg"
-                      alt="logo"
+                      src="/img/clients/kolektif-house-logo.png"
+                      alt="Kolektif House logo"
                       className="h-auto w-7 lg:w-11"
                     />
                     <Text variant="lead" className="font-semibold">
-                      Company Name
+                      Kolektif House
                     </Text>
                   </div>
                   <Text
@@ -61,32 +61,34 @@ const Testimonials2 = () => {
                     align="center"
                     className="font-semibold lg:text-left"
                   >
-                    &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua&rdquo;
+                    &ldquo;FrontRow transformed how we reach enterprise clients.
+                    Their hyper-personalized approach helped us connect with
+                    decision-makers at companies who actually need premium
+                    workspace solutions. The quality of conversations improved
+                    dramatically.&rdquo;
                   </Text>
                   <Separator className="my-8 lg:my-10" />
                   <div className="grid justify-center gap-10 text-center md:grid-cols-2 lg:justify-start lg:text-left">
                     <div className="flex flex-col">
                       <Text variant="h2" className="mb-4 text-4xl md:text-6xl">
-                        2.2x
+                        3.2x
                       </Text>
                       <Text variant="body" className="font-medium">
-                        Monthly Active Users
+                        Qualified Enterprise Leads
                       </Text>
                       <Text variant="body" color="muted">
-                        Since last month
+                        First 90 days
                       </Text>
                     </div>
                     <div className="flex flex-col">
                       <Text variant="h2" className="mb-4 text-4xl md:text-6xl">
-                        256%
+                        58%
                       </Text>
                       <Text variant="body" className="font-medium">
-                        Increase in Revenue
+                        Meeting Booking Rate
                       </Text>
                       <Text variant="body" color="muted">
-                        Since last year
+                        vs. 12% industry average
                       </Text>
                     </div>
                   </div>
@@ -95,26 +97,26 @@ const Testimonials2 = () => {
               <CarouselItem className="grid grid-cols-1 gap-y-10 pt-4 pr-4 pb-14 pl-8 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">
                 <div>
                   <img
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-2.svg"
-                    alt="placeholder"
-                    className="mx-auto max-h-80 rounded-xl lg:mx-0 lg:max-h-none"
+                    src="/img/clients/datapad-logo.jpeg"
+                    alt="Datapad"
+                    className="mx-auto h-80 w-full rounded-xl object-contain bg-white p-8 lg:mx-0"
                   />
                   <div className="mt-4 text-center">
-                    <Text variant="h6">Jane Doe</Text>
+                    <Text variant="h6">Cem Ruso</Text>
                     <Text variant="body" color="muted">
-                      CTO, Company 2
+                      CEO, Datapad
                     </Text>
                   </div>
                 </div>
                 <div className="col-span-2">
                   <div className="mb-6 flex items-center justify-center gap-2 lg:mb-8 lg:justify-start">
                     <img
-                      src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/slack-icon.svg"
-                      alt="logo"
-                      className="h-auto w-5 lg:mr-1 lg:w-9"
+                      src="/img/clients/datapad-logo.jpeg"
+                      alt="Datapad logo"
+                      className="h-auto w-5 lg:mr-1 lg:w-9 rounded"
                     />
                     <Text variant="lead" className="font-semibold">
-                      Company Name
+                      Datapad
                     </Text>
                   </div>
                   <Text
@@ -122,32 +124,34 @@ const Testimonials2 = () => {
                     align="center"
                     className="font-semibold lg:text-left"
                   >
-                    &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua&rdquo;
+                    &ldquo;We needed to reach data leaders who understand the
+                    pain of manual reporting. FrontRow&apos;s research-driven
+                    personalization was spot on—every email referenced specific
+                    analytics challenges at each company. Our reply rate doubled
+                    overnight.&rdquo;
                   </Text>
                   <Separator className="my-8 lg:my-10" />
                   <div className="grid justify-center gap-10 text-center md:grid-cols-2 lg:justify-start lg:text-left">
                     <div className="flex flex-col">
                       <Text variant="h2" className="mb-4 text-4xl md:text-6xl">
-                        1.5x
+                        2.4x
                       </Text>
                       <Text variant="body" className="font-medium">
-                        Monthly Active Users
+                        Reply Rate Improvement
                       </Text>
                       <Text variant="body" color="muted">
-                        Since last month
+                        First 60 days
                       </Text>
                     </div>
                     <div className="flex flex-col">
                       <Text variant="h2" className="mb-4 text-4xl md:text-6xl">
-                        150%
+                        47%
                       </Text>
                       <Text variant="body" className="font-medium">
-                        Increase in Revenue
+                        Demo Conversion Rate
                       </Text>
                       <Text variant="body" color="muted">
-                        Since last year
+                        From qualified leads
                       </Text>
                     </div>
                   </div>
