@@ -157,7 +157,10 @@ const CardsContainer = () => {
                 <img
                   src={card.image}
                   alt={card.imageAlt}
-                  className="size-full object-cover object-center"
+                  className="size-full object-cover object-center transition-all duration-300"
+                  style={{
+                    filter: isHovered ? "saturate(1)" : "saturate(0.3)",
+                  }}
                 />
               </div>
             </motion.div>
