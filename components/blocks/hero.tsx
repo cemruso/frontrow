@@ -5,7 +5,7 @@ import { Reviews, type Review } from "./reviews";
 import { HeroTicker } from "./hero-ticker";
 import { Badge } from "../ui/badge";
 import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
-import DotGrid from "./dotGrid";
+import { DotPattern } from "@/components/ui/dot-pattern";
 import { memo } from "react";
 
 const COMPANY_LOGOS = [
@@ -97,20 +97,15 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section className="relative overflow-hidden">
-      {/* Background DotGrid - Full Width */}
-      {/* <div className="absolute inset-0 -z-10 opacity-15">
-        <DotGrid
-          dotSize={2}
-          gap={8}
-          baseColor="white"
-          activeColor="hsl(var(--base-300))"
-          proximity={100}
-          speedTrigger={100}
-          shockRadius={150}
-          shockStrength={2}
-          className="z-10"
-        />
-      </div> */}
+      {/* Background DotPattern - Full Width */}
+      <DotPattern
+        width={20}
+        height={20}
+        cx={1}
+        cy={1}
+        cr={1}
+        className="absolute inset-0 -z-10 opacity-30"
+      />
 
       {/* Hero Content - Contained */}
       <div className="container py-32">
@@ -124,7 +119,7 @@ const Hero = ({
 
           {/* Title */}
           <div className="flex flex-col items-center container">
-            <HeroTicker title={title} className="mb-6" />
+            <HeroTicker title={title} />
           </div>
 
           {/* Description */}

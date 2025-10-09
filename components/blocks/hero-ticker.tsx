@@ -14,9 +14,9 @@ interface HeroTickerProps {
 }
 
 const DEFAULT_PHRASES = [
-  "Win 10x More Leads",
-  "Hyper Personalize Outbound",
-  "Boost Your Open Rates",
+  "Book Demo Calls",
+  "Fill Your Pipeline",
+  "Increase Your Revenue",
 ];
 
 export function HeroTicker({
@@ -37,12 +37,6 @@ export function HeroTicker({
 
   return (
     <div className="flex flex-col items-center">
-      <Text
-        variant="h1"
-        className="word-spacing-tight font-semibold text-base-400 text-center"
-      >
-        {title}
-      </Text>
       <div className={cn("overflow-hidden", className)}>
         <AnimatePresence mode="wait">
           <motion.div
@@ -64,6 +58,12 @@ export function HeroTicker({
           </motion.div>
         </AnimatePresence>
       </div>
+      <Text
+        variant="h1"
+        className="word-spacing-tight font-semibold text-center mb-6"
+      >
+        On Auto Pilot
+      </Text>
     </div>
   );
 }
