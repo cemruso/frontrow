@@ -83,18 +83,19 @@ const Hero = ({
   return (
     <section className="relative overflow-hidden">
       {/* Background DotGrid - Full Width */}
-      {/* <div className="absolute inset-0 -z-10 opacity-15">
+      <div className="absolute inset-0 -z-10 opacity-15">
         <DotGrid
           dotSize={2}
           gap={8}
-          baseColor="hsl(var(--primary))"
-          activeColor="hsl(var(--primary))"
+          baseColor="white"
+          activeColor="hsl(var(--base-300))"
           proximity={100}
           speedTrigger={100}
           shockRadius={150}
           shockStrength={2}
+          className="z-10"
         />
-      </div> */}
+      </div>
 
       {/* Hero Content - Contained */}
       <div className="container py-32">

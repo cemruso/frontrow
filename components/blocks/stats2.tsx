@@ -7,6 +7,7 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui/text";
+import { Badge } from "@/components/ui/badge";
 
 const css = `
 .candy-bg {
@@ -29,14 +30,16 @@ const Stats13 = () => {
     <section className="py-32">
       <style>{css}</style>
       <div className="gradient container">
-        <div className="mx-auto text-center ">
-          <Text variant="h2" align="center">
+        <div className="flex w-full flex-col items-center justify-center mb-12 sm:mb-16">
+          <Badge variant="outline">Performance</Badge>
+          <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
             Top-Tier Stats Across the Board
           </Text>
           <Text
             variant="body-large"
+            color="muted"
             align="center"
-            className="my-4 max-w-2xl mx-auto"
+            className="mx-auto max-w-xl"
           >
             Our lead generation platform consistently outperforms the
             competition, delivering higher quality leads and superior conversion
