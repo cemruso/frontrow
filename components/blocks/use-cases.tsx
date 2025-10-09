@@ -164,7 +164,7 @@ const useCases: UseCase[] = [
 
 export const UseCaseGrid: React.FC = () => {
   return (
-    <section className="py-8 sm:py-32 px-4 sm:px-0">
+    <section id="use-cases" className="py-8 sm:py-32 px-4 sm:px-0">
       <div className="container">
         <HeroTitle
           badge="Core Features"

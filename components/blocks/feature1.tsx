@@ -51,7 +51,7 @@ const Feature1 = () => {
   ];
 
   return (
-    <section className="overflow-hidden py-32">
+    <section id="features" className="overflow-hidden py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
         <HeroTitle
           badge="Different Kind of Outbound"

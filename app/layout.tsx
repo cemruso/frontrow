@@ -72,15 +72,15 @@ export default function RootLayout({
               title: "Frontrow",
             }}
             menu={[
-              { title: "Home", url: "/" },
-              { title: "Services", url: "/services" },
-              { title: "Platform", url: "/platform" },
-              { title: "Pricing", url: "/pricing" },
-              { title: "About", url: "/about" },
+              { title: "Features", url: "#features" },
+              { title: "How it Works", url: "#how-it-works" },
+              { title: "Team", url: "#team" },
+              { title: "Use Cases", url: "#use-cases" },
+              { title: "FAQ", url: "#faq" },
             ]}
             auth={{
-              login: { title: "Log in", url: "/login" },
-              signup: { title: "Get started", url: "/signup" },
+              login: { title: "Login", url: "#" },
+              signup: { title: "Get Started", url: "#" },
             }}
           />
           {children}

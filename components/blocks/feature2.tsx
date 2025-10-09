@@ -3,7 +3,7 @@ import { HeroTitle } from "@/components/blocks/hero-title";
 
 const Feature2 = () => {
   return (
-    <section className="py-32">
+    <section id="how-it-works" className="py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
         <HeroTitle
           badge="How it Works"

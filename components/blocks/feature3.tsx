@@ -10,7 +10,7 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 const Feature3 = () => {
   return (
-    <section className="py-32">
+    <section id="team" className="py-32">
       <div className="container flex flex-col items-center">
         <HeroTitle title="Build Your Sales Dream Team" className="mb-0" />
         <CardsContainer />

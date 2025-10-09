@@ -74,7 +74,7 @@ const Faq = ({
   items = faqItems,
 }) => {
   return (
-    <section className="py-32">
+    <section id="faq" className="py-32">
       <div className="container space-y-16">
         <HeroTitle title={heading} subtitle={description} className="mb-0" />
         <Accordion

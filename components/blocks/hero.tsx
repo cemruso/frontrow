@@ -6,6 +6,7 @@ import { HeroTicker } from "./hero-ticker";
 import { Badge } from "../ui/badge";
 import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 import DotGrid from "./dotGrid";
+import { memo } from "react";
 
 const COMPANY_LOGOS = [
   {
@@ -65,6 +66,20 @@ interface HeroProps {
     }>;
   };
 }
+
+// Memoized video section to prevent re-renders when ticker changes
+const MemoizedHeroVideo = memo(function HeroVideo() {
+  return (
+    <div className="mb-20 w-full max-w-5xl">
+      <HeroVideoDialog
+        animationStyle="from-center"
+        videoSrc="/videos/frontrow-hero.mp4"
+        thumbnailSrc="/videos/frontrow-hero-thumbnail.png"
+        thumbnailAlt="Frontrow Platform Demo"
+      />
+    </div>
+  );
+});
 
 const Hero = ({
   badge = "Lead Generation",
@@ -150,14 +165,7 @@ const Hero = ({
           </div>
 
           {/* Hero Video Section */}
-          <div className="mb-20 w-full max-w-5xl">
-            <HeroVideoDialog
-              animationStyle="from-center"
-              videoSrc="/videos/frontrow-hero.mp4"
-              thumbnailSrc="/videos/frontrow-hero-thumbnail.png"
-              thumbnailAlt="Frontrow Platform Demo"
-            />
-          </div>
+          <MemoizedHeroVideo />
 
           {/* Social Proof Section */}
           {socialProof && (

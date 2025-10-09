@@ -1,7 +1,7 @@
 "use client";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
-import React from "react";
+import { Menu } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui/text";
@@ -58,128 +58,203 @@ interface NavbarProps {
 
 const Navbar = ({
   logo = {
-    url: "https://www.frontrow.com",
+    url: "/",
     src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
     alt: "logo",
-    title: "Shadcnblocks.com",
+    title: "Frontrow",
   },
   menu = [
-    { title: "Home", url: "#" },
     {
-      title: "Products",
-      url: "#",
-      items: [
-        {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
+      title: "Features",
+      url: "#features",
     },
     {
-      title: "Resources",
-      url: "#",
-      items: [
-        {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
+      title: "How it Works",
+      url: "#how-it-works",
     },
     {
-      title: "Pricing",
-      url: "#",
+      title: "Team",
+      url: "#team",
     },
     {
-      title: "Blog",
-      url: "#",
+      title: "Use Cases",
+      url: "#use-cases",
+    },
+    {
+      title: "FAQ",
+      url: "#faq",
     },
   ],
   auth = {
     login: { title: "Login", url: "#" },
-    signup: { title: "Sign up", url: "#" },
+    signup: { title: "Get Started", url: "#" },
   },
 }: NavbarProps) => {
-  return (
-    <section className="bg-background">
-      {/* Desktop Menu */}
-      <div className="hidden border-b lg:block">
-        <div className="container px-4 py-4">
-          <nav className="flex justify-between">
-            {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-1.5 mr-[66px]">
-              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
-              <Text variant="h6" as="span" className="tracking-tighter">
-                {logo.title}
-              </Text>
-            </a>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center">
-                <NavigationMenuWithoutViewport>
-                  <NavigationMenuList className="relative">
-                    {menu.map((item) => renderMenuItem(item))}
-                  </NavigationMenuList>
-                </NavigationMenuWithoutViewport>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <Button asChild variant="outline" size="sm">
-                <a href={auth.login.url}>{auth.login.title}</a>
-              </Button>
-              <Button asChild size="sm">
-                <a href={auth.signup.url}>{auth.signup.title}</a>
-              </Button>
-            </div>
-          </nav>
-        </div>
-      </div>
+  const [isScrolled, setIsScrolled] = useState(false);
 
-      {/* Mobile Menu */}
-      <div className="container px-4">
-        <div className="block lg:hidden">
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 100; // Scroll offset in pixels
+      setIsScrolled(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <>
+      <section className="bg-background">
+        {/* Desktop Menu */}
+        <div className="hidden border-b lg:block">
+          <div className="container px-4 py-4">
+            <nav className="flex justify-between">
+              {/* Logo */}
+              <a
+                href={logo.url}
+                className="flex items-center gap-1.5 mr-[66px]"
+              >
+                <img
+                  src="/img/icon.png"
+                  className="h-6 w-auto"
+                  alt="Frontrow"
+                />
+                <Text variant="h6" as="span" className="tracking-tighter">
+                  {logo.title}
+                </Text>
+              </a>
+              <div className="flex items-center gap-6">
+                <div className="flex items-center">
+                  <NavigationMenuWithoutViewport>
+                    <NavigationMenuList className="relative">
+                      {menu.map((item) => renderMenuItem(item))}
+                    </NavigationMenuList>
+                  </NavigationMenuWithoutViewport>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <Button asChild variant="outline" size="sm">
+                  <a href={auth.login.url}>{auth.login.title}</a>
+                </Button>
+                <Button asChild size="sm">
+                  <a href={auth.signup.url}>{auth.signup.title}</a>
+                </Button>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="container px-4 py-4">
+          <div className="block lg:hidden">
+            <div className="flex items-center justify-between">
+              <a href={logo.url} className="flex items-center gap-2">
+                <img
+                  src="/img/icon.png"
+                  className="h-6 w-auto"
+                  alt="Frontrow"
+                />
+              </a>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <Menu className="size-4" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent className="overflow-y-auto">
+                  <SheetHeader>
+                    <SheetTitle>
+                      <a href={logo.url} className="flex items-center gap-2">
+                        <img
+                          src="/img/icon.png"
+                          className="h-6 w-auto"
+                          alt="Frontrow"
+                        />
+                      </a>
+                    </SheetTitle>
+                  </SheetHeader>
+                  <div className="flex flex-col gap-6 p-4">
+                    <Accordion
+                      type="single"
+                      collapsible
+                      className="flex w-full flex-col gap-4"
+                    >
+                      {menu.map((item) => renderMobileMenuItem(item))}
+                    </Accordion>
+
+                    <div className="flex flex-col gap-3">
+                      <Button asChild variant="outline">
+                        <a href={auth.login.url}>{auth.login.title}</a>
+                      </Button>
+                      <Button asChild>
+                        <a href={auth.signup.url}>{auth.signup.title}</a>
+                      </Button>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sticky Navbar - appears on scroll */}
+      <section
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b transition-all duration-300 ease-out",
+          isScrolled
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        )}
+      >
+        {/* Desktop Sticky Menu */}
+        <div className="hidden lg:block">
+          <div className="container px-4 py-3">
+            <nav className="flex justify-between items-center">
+              {/* Logo */}
+              <a
+                href={logo.url}
+                className="flex items-center gap-1.5 mr-[66px]"
+              >
+                <img
+                  src="/img/icon.png"
+                  className="h-5 w-auto"
+                  alt="Frontrow"
+                />
+                <Text
+                  variant="h6"
+                  as="span"
+                  className="tracking-tighter text-sm"
+                >
+                  {logo.title}
+                </Text>
+              </a>
+              <div className="flex items-center gap-6">
+                <div className="flex items-center">
+                  <NavigationMenuWithoutViewport>
+                    <NavigationMenuList className="relative">
+                      {menu.map((item) => renderMenuItem(item))}
+                    </NavigationMenuList>
+                  </NavigationMenuWithoutViewport>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <Button asChild variant="outline" size="sm">
+                  <a href={auth.login.url}>{auth.login.title}</a>
+                </Button>
+                <Button asChild size="sm">
+                  <a href={auth.signup.url}>{auth.signup.title}</a>
+                </Button>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        {/* Mobile Sticky Menu */}
+        <div className="container px-4 py-3 lg:hidden">
           <div className="flex items-center justify-between">
             <a href={logo.url} className="flex items-center gap-2">
-              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
+              <img src="/img/icon.png" className="h-5 w-auto" alt="Frontrow" />
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -193,7 +268,7 @@ const Navbar = ({
                     <a href={logo.url} className="flex items-center gap-2">
                       <img
                         src="/img/icon.png"
-                        className="h- w-auto"
+                        className="h-6 w-auto"
                         alt="Frontrow"
                       />
                     </a>
@@ -221,8 +296,8 @@ const Navbar = ({
             </Sheet>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
@@ -246,6 +321,15 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
+        onClick={(e) => {
+          if (item.url.startsWith("#")) {
+            e.preventDefault();
+            const element = document.querySelector(item.url);
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+        }}
         className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground"
       >
         {item.title}
@@ -277,6 +361,15 @@ const renderMobileMenuItem = (item: MenuItem) => {
       href={item.url}
       variant="link"
       className="text-base"
+      onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (item.url.startsWith("#")) {
+          e.preventDefault();
+          const element = document.querySelector(item.url);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }}
     >
       {item.title}
     </Text>
