@@ -63,27 +63,29 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${satoshi.variable} antialiased`}
       >
-        <Navbar
-          logo={{
-            url: "/",
-            src: "/frontrow-logo.svg",
-            alt: "Frontrow",
-            title: "Frontrow",
-          }}
-          menu={[
-            { title: "Home", url: "/" },
-            { title: "Services", url: "/services" },
-            { title: "Platform", url: "/platform" },
-            { title: "Pricing", url: "/pricing" },
-            { title: "About", url: "/about" },
-          ]}
-          auth={{
-            login: { title: "Log in", url: "/login" },
-            signup: { title: "Get started", url: "/signup" },
-          }}
-        />
-        {children}
-        <Footer />
+        <div className="bg-base-50">
+          <Navbar
+            logo={{
+              url: "/",
+              src: "/frontrow-logo.svg",
+              alt: "Frontrow",
+              title: "Frontrow",
+            }}
+            menu={[
+              { title: "Home", url: "/" },
+              { title: "Services", url: "/services" },
+              { title: "Platform", url: "/platform" },
+              { title: "Pricing", url: "/pricing" },
+              { title: "About", url: "/about" },
+            ]}
+            auth={{
+              login: { title: "Log in", url: "/login" },
+              signup: { title: "Get started", url: "/signup" },
+            }}
+          />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

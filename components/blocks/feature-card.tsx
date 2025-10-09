@@ -30,7 +30,7 @@ const FeatureCard = ({
   return (
     <div
       className={cn(
-        "flex flex-row overflow-clip rounded-xl border border-border md:gap-6 lg:gap-8",
+        "flex flex-row bg-background overflow-clip rounded-xl border border-border md:gap-6 lg:gap-8",
         imagePosition === "right" ? "flex-row-reverse" : "",
         className
       )}

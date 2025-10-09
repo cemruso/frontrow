@@ -141,10 +141,10 @@ const Navbar = ({
   },
 }: NavbarProps) => {
   return (
-    <section className="py-4">
+    <section className="bg-background">
       {/* Desktop Menu */}
       <div className="hidden border-b lg:block">
-        <div className="container px-4 pb-4">
+        <div className="container px-4 py-4">
           <nav className="flex justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-1.5">

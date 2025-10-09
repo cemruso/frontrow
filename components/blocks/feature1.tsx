@@ -1,17 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  BrushCleaning,
-  Clock,
-  CodeXml,
-  Plug2,
-  Snowflake,
-  Zap,
-  Target,
-  TrendingUp,
-  Users,
-} from "lucide-react";
+import { Inbox, Sparkles, Target, TrendingUp, Zap, Users2 } from "lucide-react";
 import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -23,67 +13,49 @@ const Feature1 = () => {
 
   const items = [
     {
-      title: "Fully Managed",
+      title: "2x Primary Inbox Delivery",
       description:
-        "You don't build lists or write emails. We deliver targeted outreach that learns and improves month after month",
-      icon: Users,
+        "We perform at twice the market rate. Every email lands in the primary inbox through verified infrastructure, timezone scheduling, and safe daily limits",
+      icon: Inbox,
     },
     {
-      title: "Hyper-Personalization",
+      title: "Hyper-Personalization at Scale",
       description:
-        "Enterprise LLM stack turns research into concise one-to-one emails tailored to each recipient",
-      icon: Zap,
+        "Enterprise LLM stack writes one-to-one emails grounded in verified research. Every message is tailored to each recipient with evidence-backed facts",
+      icon: Sparkles,
     },
     {
-      title: "Primary Inbox Delivery",
+      title: "Fully Managed Outbound",
       description:
-        "Email verification, timezone scheduling, safe daily limits, and tested infrastructure delivering 2x market performance",
-      icon: Clock,
+        "You don't build lists or write emails. We handle everything from ICP design to execution while you focus on closing deals",
+      icon: Users2,
     },
     {
-      title: "Audience Intelligence",
+      title: "AI-Powered Lookalike Modeling",
       description:
-        "Machine learning powered ICP refinement and lookalike modeling that finds companies matching your best customers",
+        "Machine learning finds companies that match your best customers. ICP refinement and audience intelligence that gets smarter with every campaign",
       icon: Target,
     },
     {
-      title: "Deep Research",
+      title: "Continuous Learning Loops",
       description:
-        "Context gathered from approved sources and mapped to each email so every message is grounded in evidence",
-      icon: BrushCleaning,
-    },
-    {
-      title: "Continuous Learning",
-      description:
-        "Outcomes drive ICP refinement, messaging updates, and lookalike campaigns that compound results over time",
+        "Outcomes drive everything. ICP refinement, messaging updates, and lookalike campaigns compound results month after month",
       icon: TrendingUp,
     },
     {
-      title: "Fast Time to Value",
+      title: "Days to First Campaign",
       description:
-        "From discovery to execution in days not weeks with workflows that accelerate while respecting your controls",
-      icon: Plug2,
-    },
-    {
-      title: "Full Transparency",
-      description:
-        "Clear approvals at each step with control over sources, messaging approach, and data reuse",
-      icon: CodeXml,
-    },
-    {
-      title: "Enterprise Security",
-      description:
-        "Secure inbox integrations with Google, Outlook, and SMTP plus privacy controls you define",
-      icon: Snowflake,
+        "From discovery to execution in days not weeks. Fast time to value with workflows that accelerate while respecting your controls",
+      icon: Zap,
     },
   ];
 
   return (
     <section className="overflow-hidden py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
-        <Badge variant="outline">Our Promise</Badge>
+        <Badge variant="outline">Different Kind of Outbound</Badge>
         <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
-          Managed AI Outbound Built on Principles
+          Our Promise is Big
         </Text>
         <Text
           variant="body-large"
@@ -122,7 +94,6 @@ const Feature1 = () => {
                 title={item.title}
                 description={item.description}
                 icon={item.icon}
-                className="flex flex-col items-center justify-center"
               />
             </div>
           ))}
@@ -148,15 +119,19 @@ const Card = ({
   return (
     <div
       className={cn(
-        "bg-muted relative z-20 flex h-full flex-col items-center justify-center gap-4 rounded-2xl p-5 text-center",
+        "border boder-border bg-background relative z-20 flex h-full min-h-[250px] flex-col items-start justify-between rounded-2xl p-6",
         className
       )}
     >
-      <Icon className="text-muted-foreground mt-3 size-8 stroke-1" />
-      <Text variant="h6">{title}</Text>
-      <Text variant="body" align="center" color="muted">
-        {description}
-      </Text>
+      <Icon className="size-6" />
+      <div className="flex flex-col gap-2">
+        <Text variant="h6" className="text-lg">
+          {title}
+        </Text>
+        <Text variant="body" color="muted" className="line-clamp-2">
+          {description}
+        </Text>
+      </div>
     </div>
   );
 };

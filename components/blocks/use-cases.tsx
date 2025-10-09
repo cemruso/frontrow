@@ -41,7 +41,7 @@ export const UseCaseCard: React.FC<UseCaseCardProps> = ({
   const cardContent = (
     <div
       className={cn(
-        "bg-black-3 overflow-hidden dark:bg-white-3 border group relative flex h-full min-h-80 sm:min-h-[500px] w-full flex-col justify-between text-ellipsis rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-transform duration-200 ease-out hover:scale-[1.02]",
+        "bg-background overflow-hidden dark:bg-white-3 border group relative flex h-full min-h-80 sm:min-h-[500px] w-full flex-col justify-between text-ellipsis rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-transform duration-200 ease-out hover:scale-[1.02]",
         className
       )}
     >

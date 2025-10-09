@@ -12,7 +12,7 @@ const Testimonials2 = () => {
   return (
     <section className="py-32">
       <div className="container">
-        <div className="relative rounded-2xl bg-muted">
+        <div className="relative rounded-2xl bg-background border border-border">
           <Carousel className="static">
             <CarouselContent className="-ml-4">
               <CarouselItem className="grid grid-cols-1 gap-y-10 pt-4 pr-4 pb-14 pl-8 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">

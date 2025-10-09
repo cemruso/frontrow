@@ -11,7 +11,7 @@ import { UseCaseGrid } from "@/components/blocks/use-cases";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-base-50">
       <Hero />
       <Feature2 />
       <Feature1 />

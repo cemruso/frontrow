@@ -8,7 +8,7 @@ import { Text } from "@/components/ui/text";
 
 const Feature3 = () => {
   return (
-    <section className="bg-background py-32">
+    <section className="py-32">
       <div className="container flex flex-col items-center">
         <Text variant="h2" align="center" className="max-w-4xl">
           Build Your Sales Dream Team

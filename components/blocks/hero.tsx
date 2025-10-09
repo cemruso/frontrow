@@ -126,7 +126,7 @@ const Hero = ({
             <Input
               type="email"
               placeholder={input.placeholder}
-              className="h-12 flex-1"
+              className="h-12 flex-1 bg-background"
             />
             <Button size="lg" className="h-12 px-6">
               {input.buttonText}
