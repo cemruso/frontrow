@@ -17,9 +17,9 @@ export default function Home() {
       <Feature3 />
       <Feature2 />
       <Feature1 />
-      <UseCaseGrid />
       <Testimonials2 />
       <Stats13 />
+      <UseCaseGrid />
       {/* <Testimonials /> */}
       <WorldMapSection />
       <CTA />

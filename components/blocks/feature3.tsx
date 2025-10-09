@@ -159,7 +159,7 @@ const CardsContainer = () => {
                   alt={card.imageAlt}
                   className="size-full object-cover object-center transition-all duration-300"
                   style={{
-                    filter: isHovered ? "saturate(1)" : "saturate(0.3)",
+                    filter: isHovered ? "saturate(1)" : "saturate(0.8)",
                   }}
                 />
               </div>
