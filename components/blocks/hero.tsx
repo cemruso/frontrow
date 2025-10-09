@@ -82,7 +82,7 @@ const MemoizedHeroVideo = memo(function HeroVideo() {
 });
 
 const Hero = ({
-  badge = "Lead Generation",
+  badge = "Your Automated Growth Engine",
   title = "Growth, Re-Imagined",
   description = "Transform growth into a science. Capture intent signals, run AI agents, and engage every prospect with personalized outbound in one system of action.",
   input = {
