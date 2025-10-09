@@ -147,7 +147,7 @@ const Navbar = ({
         <div className="container px-4 py-4">
           <nav className="flex justify-between">
             {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-1.5">
+            <a href={logo.url} className="flex items-center gap-1.5 mr-[66px]">
               <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
               <Text variant="h6" as="span" className="tracking-tighter">
                 {logo.title}
