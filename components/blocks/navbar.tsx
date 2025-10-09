@@ -142,36 +142,40 @@ const Navbar = ({
 }: NavbarProps) => {
   return (
     <section className="py-4">
-      <div className="container px-4">
-        {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex">
-          {/* Logo */}
-          <a href={logo.url} className="flex items-center gap-1.5">
-            <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
-            <Text variant="h6" as="span" className="tracking-tighter">
-              {logo.title}
-            </Text>
-          </a>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center">
-              <NavigationMenuWithoutViewport>
-                <NavigationMenuList className="relative">
-                  {menu.map((item) => renderMenuItem(item))}
-                </NavigationMenuList>
-              </NavigationMenuWithoutViewport>
+      {/* Desktop Menu */}
+      <div className="hidden border-b lg:block">
+        <div className="container px-4 pb-4">
+          <nav className="flex justify-between">
+            {/* Logo */}
+            <a href={logo.url} className="flex items-center gap-1.5">
+              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
+              <Text variant="h6" as="span" className="tracking-tighter">
+                {logo.title}
+              </Text>
+            </a>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center">
+                <NavigationMenuWithoutViewport>
+                  <NavigationMenuList className="relative">
+                    {menu.map((item) => renderMenuItem(item))}
+                  </NavigationMenuList>
+                </NavigationMenuWithoutViewport>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-2">
-            <Button asChild variant="outline" size="sm">
-              <a href={auth.login.url}>{auth.login.title}</a>
-            </Button>
-            <Button asChild size="sm">
-              <a href={auth.signup.url}>{auth.signup.title}</a>
-            </Button>
-          </div>
-        </nav>
+            <div className="flex gap-2">
+              <Button asChild variant="outline" size="sm">
+                <a href={auth.login.url}>{auth.login.title}</a>
+              </Button>
+              <Button asChild size="sm">
+                <a href={auth.signup.url}>{auth.signup.title}</a>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      </div>
 
-        {/* Mobile Menu */}
+      {/* Mobile Menu */}
+      <div className="container px-4">
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <a href={logo.url} className="flex items-center gap-2">

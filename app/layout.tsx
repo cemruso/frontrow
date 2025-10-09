@@ -82,7 +82,7 @@ export default function RootLayout({
             signup: { title: "Get started", url: "/signup" },
           }}
         />
-        <main className="container mx-auto px-4">{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

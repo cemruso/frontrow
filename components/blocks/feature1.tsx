@@ -23,67 +23,67 @@ const Feature1 = () => {
 
   const items = [
     {
-      title: "Instant Setup",
+      title: "Fully Managed",
       description:
-        "Get started in minutes with our plug-and-play lead generation platform",
-      icon: Plug2,
+        "You don't build lists or write emails. We deliver targeted outreach that learns and improves month after month",
+      icon: Users,
     },
     {
-      title: "Customizable Campaigns",
+      title: "Hyper-Personalization",
       description:
-        "Tailor your outreach strategies to match your unique business needs",
-      icon: CodeXml,
-    },
-    {
-      title: "Brand Control",
-      description:
-        "Maintain complete control over your messaging and brand identity",
-      icon: Snowflake,
-    },
-    {
-      title: "Real-Time Sync",
-      description:
-        "Keep your CRM and lead data synchronized in real-time across all platforms",
-      icon: Clock,
-    },
-    {
-      title: "Clean Data",
-      description:
-        "High-quality, verified leads with accurate contact information",
-      icon: BrushCleaning,
-    },
-    {
-      title: "Fast Delivery",
-      description:
-        "Get qualified leads delivered quickly without compromising on quality",
+        "Enterprise LLM stack turns research into concise one-to-one emails tailored to each recipient",
       icon: Zap,
     },
     {
-      title: "Precision Targeting",
+      title: "Primary Inbox Delivery",
       description:
-        "Reach your ideal customers with advanced targeting and segmentation tools",
+        "Email verification, timezone scheduling, safe daily limits, and tested infrastructure delivering 2x market performance",
+      icon: Clock,
+    },
+    {
+      title: "Audience Intelligence",
+      description:
+        "Machine learning powered ICP refinement and lookalike modeling that finds companies matching your best customers",
       icon: Target,
     },
     {
-      title: "Scale with Confidence",
+      title: "Deep Research",
       description:
-        "Grow your pipeline predictably with proven strategies that scale",
+        "Context gathered from approved sources and mapped to each email so every message is grounded in evidence",
+      icon: BrushCleaning,
+    },
+    {
+      title: "Continuous Learning",
+      description:
+        "Outcomes drive ICP refinement, messaging updates, and lookalike campaigns that compound results over time",
       icon: TrendingUp,
     },
     {
-      title: "Dedicated Support",
+      title: "Fast Time to Value",
       description:
-        "Work with expert lead generation specialists who understand your goals",
-      icon: Users,
+        "From discovery to execution in days not weeks with workflows that accelerate while respecting your controls",
+      icon: Plug2,
+    },
+    {
+      title: "Full Transparency",
+      description:
+        "Clear approvals at each step with control over sources, messaging approach, and data reuse",
+      icon: CodeXml,
+    },
+    {
+      title: "Enterprise Security",
+      description:
+        "Secure inbox integrations with Google, Outlook, and SMTP plus privacy controls you define",
+      icon: Snowflake,
     },
   ];
 
   return (
     <section className="overflow-hidden py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
-        <Badge variant="outline">Why Frontrow?</Badge>
+        <Badge variant="outline">Our Promise</Badge>
         <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
-          Built for Modern Sales Teams
+          Managed AI Outbound Built on Principles
         </Text>
         <Text
           variant="body-large"
@@ -91,7 +91,9 @@ const Feature1 = () => {
           align="center"
           className="mx-auto max-w-xl"
         >
-          Everything you need to generate, qualify, and convert leads at scale.
+          Automation by default with clear approvals. Hyper-personalization
+          grounded in verified sources. Deliverability and clarity over tricks
+          and noise.
         </Text>
 
         <div className="relative mt-10 grid w-full container grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

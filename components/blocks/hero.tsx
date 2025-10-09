@@ -4,6 +4,8 @@ import { Text } from "@/components/ui/text";
 import { Reviews, type Review } from "./reviews";
 import { HeroTicker } from "./hero-ticker";
 import { Badge } from "../ui/badge";
+import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
+import DotGrid from "./dotGrid";
 
 const COMPANY_LOGOS = [
   {
@@ -79,8 +81,23 @@ const Hero = ({
   },
 }: HeroProps) => {
   return (
-    <section className="py-32">
-      <div className="container">
+    <section className="relative overflow-hidden">
+      {/* Background DotGrid - Full Width */}
+      {/* <div className="absolute inset-0 -z-10 opacity-15">
+        <DotGrid
+          dotSize={2}
+          gap={8}
+          baseColor="hsl(var(--primary))"
+          activeColor="hsl(var(--primary))"
+          proximity={100}
+          speedTrigger={100}
+          shockRadius={150}
+          shockStrength={2}
+        />
+      </div> */}
+
+      {/* Hero Content - Contained */}
+      <div className="container py-32">
         <div className="flex flex-col items-center text-center">
           {/* Badge */}
           {badge && (
@@ -129,6 +146,16 @@ const Hero = ({
           {/* Reviews Section */}
           <div className="mb-20">
             <Reviews reviews={reviews} />
+          </div>
+
+          {/* Hero Video Section */}
+          <div className="mb-20 w-full max-w-5xl">
+            <HeroVideoDialog
+              animationStyle="from-center"
+              videoSrc="/videos/frontrow-hero.mp4"
+              thumbnailSrc="/videos/frontrow-hero-thumbnail.png"
+              thumbnailAlt="Frontrow Platform Demo"
+            />
           </div>
 
           {/* Social Proof Section */}
