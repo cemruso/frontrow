@@ -14,16 +14,16 @@ export default function Home() {
   return (
     <main className="bg-base-50">
       <Hero />
+      <Feature3 />
       <Feature2 />
       <Feature1 />
-      <Feature3 />
       <UseCaseGrid />
       <Testimonials2 />
       <Stats13 />
       {/* <Testimonials /> */}
+      <WorldMapSection />
       <CTA />
       <Faq />
-      <WorldMapSection />
     </main>
   );
 }
