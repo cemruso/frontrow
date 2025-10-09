@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Text } from "@/components/ui/text";
+import { HeroTitle } from "@/components/blocks/hero-title";
 
 interface FaqItem {
   id: string;
@@ -75,14 +76,7 @@ const Faq = ({
   return (
     <section className="py-32">
       <div className="container space-y-16">
-        <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
-          <Text variant="h2" className="mb-3 md:mb-4 lg:mb-6">
-            {heading}
-          </Text>
-          <Text variant="body-large" color="muted">
-            {description}
-          </Text>
-        </div>
+        <HeroTitle title={heading} subtitle={description} className="mb-0" />
         <Accordion
           type="single"
           collapsible

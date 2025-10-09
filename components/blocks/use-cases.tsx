@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import { Text } from "@/components/ui/text";
-import { Badge } from "@/components/ui/badge";
+import { HeroTitle } from "@/components/blocks/hero-title";
 
 const DottedDiv = ({
   children,
@@ -166,21 +166,11 @@ export const UseCaseGrid: React.FC = () => {
   return (
     <section className="py-8 sm:py-32 px-4 sm:px-0">
       <div className="container">
-        <div className="flex w-full flex-col items-center justify-center mb-12 sm:mb-16">
-          <Badge variant="outline">Core Features</Badge>
-          <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
-            What We Deliver
-          </Text>
-          <Text
-            variant="body-large"
-            color="muted"
-            align="center"
-            className="mx-auto max-w-xl"
-          >
-            From ICP design to hyper-personalized delivery. Every message backed
-            by research, optimized for the primary inbox.
-          </Text>
-        </div>
+        <HeroTitle
+          badge="Core Features"
+          title="What We Deliver"
+          subtitle="From ICP design to hyper-personalized delivery. Every message backed by research, optimized for the primary inbox."
+        />
         <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {useCases.map((useCase, index) => (
             <UseCaseCard

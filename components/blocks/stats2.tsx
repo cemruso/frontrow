@@ -7,7 +7,7 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui/text";
-import { Badge } from "@/components/ui/badge";
+import { HeroTitle } from "@/components/blocks/hero-title";
 
 const css = `
 .candy-bg {
@@ -30,22 +30,11 @@ const Stats13 = () => {
     <section className="py-32">
       <style>{css}</style>
       <div className="gradient container">
-        <div className="flex w-full flex-col items-center justify-center mb-12 sm:mb-16">
-          <Badge variant="outline">Performance</Badge>
-          <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
-            Top-Tier Stats Across the Board
-          </Text>
-          <Text
-            variant="body-large"
-            color="muted"
-            align="center"
-            className="mx-auto max-w-xl"
-          >
-            Our lead generation platform consistently outperforms the
-            competition, delivering higher quality leads and superior conversion
-            rates.
-          </Text>
-        </div>
+        <HeroTitle
+          badge="Performance"
+          title="Top-Tier Stats Across the Board"
+          subtitle="Our lead generation platform consistently outperforms the competition, delivering higher quality leads and superior conversion rates."
+        />
         <div className="relative mx-auto mt-20 flex h-112  items-center justify-center gap-2">
           {[
             { value: 35, label: "Amplemarket", delay: 0.2 },

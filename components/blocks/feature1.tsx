@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui/text";
-import { Badge } from "@/components/ui/badge";
+import { HeroTitle } from "@/components/blocks/hero-title";
 
 const Feature1 = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -53,22 +53,13 @@ const Feature1 = () => {
   return (
     <section className="overflow-hidden py-32">
       <div className="container flex w-full flex-col items-center justify-center px-4">
-        <Badge variant="outline">Different Kind of Outbound</Badge>
-        <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
-          Our Promise is Big
-        </Text>
-        <Text
-          variant="body-large"
-          color="muted"
-          align="center"
-          className="mx-auto max-w-xl"
-        >
-          Automation by default with clear approvals. Hyper-personalization
-          grounded in verified sources. Deliverability and clarity over tricks
-          and noise.
-        </Text>
+        <HeroTitle
+          badge="Different Kind of Outbound"
+          title="Our Promise is Big"
+          subtitle="Automation by default with clear approvals. Hyper-personalization grounded in verified sources. Deliverability and clarity over tricks and noise."
+        />
 
-        <div className="relative mt-10 grid w-full container grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="relative grid w-full container grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, idx) => (
             <div
               key={idx}

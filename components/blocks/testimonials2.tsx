@@ -7,27 +7,17 @@ import {
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { Text } from "@/components/ui/text";
-import { Badge } from "@/components/ui/badge";
+import { HeroTitle } from "@/components/blocks/hero-title";
 
 const Testimonials2 = () => {
   return (
     <section className="py-32">
       <div className="container">
-        <div className="flex w-full flex-col items-center justify-center mb-12 sm:mb-16">
-          <Badge variant="outline">Customer Stories</Badge>
-          <Text variant="h2" className="relative z-20 py-2 text-center md:py-7">
-            Real Results from Real Teams
-          </Text>
-          <Text
-            variant="body-large"
-            color="muted"
-            align="center"
-            className="mx-auto max-w-xl"
-          >
-            See how leading companies are using Frontrow to scale their outbound
-            and drive measurable growth.
-          </Text>
-        </div>
+        <HeroTitle
+          badge="Customer Stories"
+          title="Real Results from Real Teams"
+          subtitle="See how leading companies are using Frontrow to scale their outbound and drive measurable growth."
+        />
         <div className="relative rounded-2xl bg-background border border-border">
           <Carousel className="static">
             <CarouselContent className="-ml-4">

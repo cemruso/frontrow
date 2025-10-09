@@ -8,6 +8,7 @@ import { Testimonials2 } from "@/components/blocks/testimonials2";
 import { Feature3 } from "@/components/blocks/feature3";
 import { CTA } from "@/components/blocks/cta";
 import { UseCaseGrid } from "@/components/blocks/use-cases";
+import { WorldMapSection } from "@/components/blocks/world-map-section";
 
 export default function Home() {
   return (
@@ -15,13 +16,14 @@ export default function Home() {
       <Hero />
       <Feature2 />
       <Feature1 />
-      <UseCaseGrid />
       <Feature3 />
+      <UseCaseGrid />
       <Testimonials2 />
       <Stats13 />
       {/* <Testimonials /> */}
       <CTA />
       <Faq />
+      <WorldMapSection />
     </main>
   );
 }
