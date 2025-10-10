@@ -7,22 +7,6 @@ import {
 import { Text } from "@/components/ui/text";
 import { HeroTitle } from "@/components/blocks/hero-title";
 
-interface FaqItem {
-  id: string;
-  question: string;
-  answer: string;
-}
-
-interface FaqProps {
-  heading?: string;
-  description?: string;
-  items?: FaqItem[];
-  supportHeading?: string;
-  supportDescription?: string;
-  supportButtonText?: string;
-  supportButtonUrl?: string;
-}
-
 const faqItems = [
   {
     id: "faq-1",

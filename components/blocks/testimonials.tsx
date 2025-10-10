@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Text } from "@/components/ui/text";
 
@@ -144,11 +145,12 @@ const Testimonials = () => {
                   role={testimonial.author.role}
                   name={testimonial.author.name}
                 />
-                <div className="w-24">
-                  <img
-                    className="w-full object-contain object-center opacity-80"
+                <div className="relative w-24 h-10">
+                  <Image
+                    className="object-contain object-center opacity-80"
                     src={testimonial.company.logo}
                     alt={testimonial.company.name}
+                    fill
                   />
                 </div>
               </div>

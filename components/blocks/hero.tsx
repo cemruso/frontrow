@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
@@ -83,7 +84,6 @@ const MemoizedHeroVideo = memo(function HeroVideo() {
 
 const Hero = ({
   badge = "Your Automated Growth Engine",
-  title = "Growth, Re-Imagined",
   description = "Transform growth into a science. Capture intent signals, run AI agents, and engage every prospect with personalized outbound in one system of action.",
   input = {
     placeholder: "What's your work email?",
@@ -119,7 +119,7 @@ const Hero = ({
 
           {/* Title */}
           <div className="flex flex-col items-center container">
-            <HeroTicker title={title} />
+            <HeroTicker />
           </div>
 
           {/* Description */}
@@ -178,7 +178,7 @@ const Hero = ({
                       key={index}
                       className="flex h-12 items-center justify-center"
                     >
-                      <img
+                      <Image
                         src={logo.src}
                         alt={logo.name}
                         width={logo.width}

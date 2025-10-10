@@ -26,7 +26,6 @@ interface UseCaseCardProps {
   className?: string;
   step?: string;
   href?: string;
-  buttonLocation?: string;
 }
 
 export const UseCaseCard: React.FC<UseCaseCardProps> = ({
@@ -36,7 +35,6 @@ export const UseCaseCard: React.FC<UseCaseCardProps> = ({
   className,
   step,
   href,
-  buttonLocation,
 }) => {
   const cardContent = (
     <div
@@ -97,7 +95,6 @@ export const UseCaseCardWithDots: React.FC<
   step,
   wrapperClassName,
   href,
-  buttonLocation,
 }) => {
   return (
     <DottedDiv
@@ -109,7 +106,6 @@ export const UseCaseCardWithDots: React.FC<
         step={step}
         className={className}
         href={href}
-        buttonLocation={buttonLocation}
       >
         {children}
       </UseCaseCard>
@@ -178,9 +174,6 @@ export const UseCaseGrid: React.FC = () => {
               title={useCase.title}
               description={useCase.description}
               href={process.env.NEXT_PUBLIC_APP_URL || "https://app.datapad.io"}
-              buttonLocation={`use-case-grid-${useCase.title
-                .toLowerCase()
-                .replace(/\s+/g, "-")}`}
             >
               <div className="flex w-full flex-1 flex-col gap-4">
                 <div className="relative w-full h-full">

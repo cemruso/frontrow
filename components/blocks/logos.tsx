@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Text } from "@/components/ui/text";
 
 const ITEMS = [
@@ -86,7 +87,7 @@ const Logos7 = () => {
           <div className="flex shrink-0 animate-marquee items-center gap-12">
             {ITEMS.map((logo, index) => (
               <a href={logo.href} target="_blank" key={index} className="p-6">
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.name}
                   width={logo.width}
@@ -99,8 +100,13 @@ const Logos7 = () => {
           {/* Second marquee group */}
           <div className="flex shrink-0 animate-marquee items-center gap-12">
             {ITEMS.map((logo, index) => (
-              <a href={logo.href} target="_blank" key={index} className="p-6">
-                <img
+              <a
+                href={logo.href}
+                target="_blank"
+                key={`second-${index}`}
+                className="p-6"
+              >
+                <Image
                   src={logo.src}
                   alt={logo.name}
                   width={logo.width}

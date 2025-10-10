@@ -2,6 +2,7 @@
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { Menu } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { Text } from "@/components/ui/text";
@@ -110,7 +111,12 @@ const Navbar = ({
           <nav className="hidden lg:flex justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-1.5 mr-[66px]">
-              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
+              <Image
+                src="/img/icon.png"
+                width={24}
+                height={24}
+                alt="Frontrow"
+              />
               <Text variant="h6" as="span" className="tracking-tighter">
                 {logo.title}
               </Text>
@@ -137,7 +143,12 @@ const Navbar = ({
           {/* Mobile Menu */}
           <div className="flex lg:hidden items-center justify-between">
             <a href={logo.url} className="flex items-center gap-2">
-              <img src="/img/icon.png" className="h-6 w-auto" alt="Frontrow" />
+              <Image
+                src="/img/icon.png"
+                width={24}
+                height={24}
+                alt="Frontrow"
+              />
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -149,9 +160,10 @@ const Navbar = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
-                      <img
+                      <Image
                         src="/img/icon.png"
-                        className="h-6 w-auto"
+                        width={24}
+                        height={24}
                         alt="Frontrow"
                       />
                     </a>
@@ -199,9 +211,10 @@ const Navbar = ({
                 href={logo.url}
                 className="flex items-center gap-1.5 mr-[66px]"
               >
-                <img
+                <Image
                   src="/img/icon.png"
-                  className="h-5 w-auto"
+                  width={20}
+                  height={20}
                   alt="Frontrow"
                 />
                 <Text
@@ -237,7 +250,12 @@ const Navbar = ({
         <div className="container px-4 py-3 lg:hidden">
           <div className="flex items-center justify-between">
             <a href={logo.url} className="flex items-center gap-2">
-              <img src="/img/icon.png" className="h-5 w-auto" alt="Frontrow" />
+              <Image
+                src="/img/icon.png"
+                width={20}
+                height={20}
+                alt="Frontrow"
+              />
             </a>
             <Sheet>
               <SheetTrigger asChild>
@@ -249,9 +267,10 @@ const Navbar = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
-                      <img
+                      <Image
                         src="/img/icon.png"
-                        className="h-6 w-auto"
+                        width={24}
+                        height={24}
                         alt="Frontrow"
                       />
                     </a>

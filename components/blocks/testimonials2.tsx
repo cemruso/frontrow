@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -23,11 +24,14 @@ const Testimonials2 = () => {
             <CarouselContent className="-ml-4">
               <CarouselItem className="grid grid-cols-1 gap-y-10 pt-4 pr-4 pb-14 pl-8 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">
                 <div>
-                  <img
-                    src="/img/clients/kolektif-house-hero.jpg"
-                    alt="Kolektif House workspace"
-                    className="mx-auto h-80 w-full rounded-xl object-cover lg:mx-0"
-                  />
+                  <div className="relative mx-auto h-80 w-full lg:mx-0">
+                    <Image
+                      src="/img/clients/kolektif-house-hero.jpg"
+                      alt="Kolektif House workspace"
+                      fill
+                      className="rounded-xl object-cover"
+                    />
+                  </div>
                   <div className="mt-4 text-center">
                     <Text variant="h6">Ahmet Onur</Text>
                     <Text variant="body" color="muted">
@@ -37,9 +41,11 @@ const Testimonials2 = () => {
                 </div>
                 <div className="col-span-2">
                   <div className="mb-6 flex items-center justify-center gap-2 lg:mb-8 lg:justify-start">
-                    <img
+                    <Image
                       src="/img/clients/kolektif-house-logo.png"
                       alt="Kolektif House logo"
+                      width={44}
+                      height={44}
                       className="h-auto w-7 lg:w-11"
                     />
                     <Text variant="lead" className="font-semibold">
@@ -86,11 +92,14 @@ const Testimonials2 = () => {
               </CarouselItem>
               <CarouselItem className="grid grid-cols-1 gap-y-10 pt-4 pr-4 pb-14 pl-8 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">
                 <div>
-                  <img
-                    src="/img/clients/datapad-logo.jpeg"
-                    alt="Datapad"
-                    className="mx-auto h-80 w-full rounded-xl object-contain bg-white p-8 lg:mx-0"
-                  />
+                  <div className="relative mx-auto h-80 w-full lg:mx-0 bg-white rounded-xl">
+                    <Image
+                      src="/img/clients/datapad-logo.jpeg"
+                      alt="Datapad"
+                      fill
+                      className="object-contain p-8"
+                    />
+                  </div>
                   <div className="mt-4 text-center">
                     <Text variant="h6">Cem Ruso</Text>
                     <Text variant="body" color="muted">
@@ -100,9 +109,11 @@ const Testimonials2 = () => {
                 </div>
                 <div className="col-span-2">
                   <div className="mb-6 flex items-center justify-center gap-2 lg:mb-8 lg:justify-start">
-                    <img
+                    <Image
                       src="/img/clients/datapad-logo.jpeg"
                       alt="Datapad logo"
+                      width={36}
+                      height={36}
                       className="h-auto w-5 lg:mr-1 lg:w-9 rounded"
                     />
                     <Text variant="lead" className="font-semibold">

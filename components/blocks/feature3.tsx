@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
@@ -154,10 +155,11 @@ const CardsContainer = () => {
                   marginLeft: index === 0 ? "0px" : "-50px",
                 }}
               >
-                <img
+                <Image
                   src={card.image}
                   alt={card.imageAlt}
-                  className="size-full object-cover object-center transition-all duration-300"
+                  fill
+                  className="object-cover object-center transition-all duration-300"
                   style={{
                     filter: isHovered ? "saturate(1)" : "saturate(0.8)",
                   }}

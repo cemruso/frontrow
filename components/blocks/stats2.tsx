@@ -6,7 +6,6 @@ import { CirclePercent } from "lucide-react";
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import { Text } from "@/components/ui/text";
 import { HeroTitle } from "@/components/blocks/hero-title";
 
 const css = `

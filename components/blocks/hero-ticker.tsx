@@ -10,7 +10,6 @@ interface HeroTickerProps {
   phrases?: string[];
   duration?: number;
   className?: string;
-  title?: string;
 }
 
 const DEFAULT_PHRASES = [
@@ -23,7 +22,6 @@ export function HeroTicker({
   phrases = DEFAULT_PHRASES,
   duration = 3000,
   className,
-  title,
 }: HeroTickerProps) {
   const [index, setIndex] = useState(0);
 
